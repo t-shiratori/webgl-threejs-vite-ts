@@ -68,4 +68,4 @@ const updateShader = (time?: number) => {
 --------------------------------------*/
 const stage = new Stage({ scene, camera, renderer })
 stage.addFrameTask({ taskName: 'updateShader', task: updateShader })
-stage.frame()
+stage.start()

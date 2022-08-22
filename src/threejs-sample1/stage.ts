@@ -42,6 +42,10 @@ export class Stage {
 		requestAnimationFrame(this.frame)
 	}
 
+	start = () => {
+		this.frame()
+	}
+
 	onResize = () => {
 		const { camera, renderer } = this
 		const width = window.innerWidth
