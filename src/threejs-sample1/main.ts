@@ -64,6 +64,8 @@ const updateShader = (time?: number) => {
 	mesh.material.uniforms.time.value = time
 }
 
+/* Stage
+--------------------------------------*/
 const stage = new Stage({ scene, camera, renderer })
 stage.addFrameTask({ taskName: 'updateShader', task: updateShader })
 stage.frame()
