@@ -2,7 +2,7 @@ import './style.css'
 import * as THREE from 'three'
 import vertexSource from './shader/vertex.glsl?raw'
 import fragmentSource from './shader/fragment.glsl?raw'
-import { World } from './world'
+import { Stage } from './stage'
 
 /* scene
 --------------------------------------*/
@@ -60,10 +60,10 @@ const shaderMaterial = new THREE.RawShaderMaterial({
 const mesh = new THREE.Mesh(boxGeometry, shaderMaterial)
 scene.add(mesh)
 
-const updateGeometry = (time?: number) => {
+const updateShader = (time?: number) => {
 	mesh.material.uniforms.time.value = time
 }
 
-const world = new World({ scene, camera, renderer })
-world.addFrameTask({ taskName: 'updateGeometry', task: updateGeometry })
-world.frame()
+const stage = new Stage({ scene, camera, renderer })
+stage.addFrameTask({ taskName: 'updateShader', task: updateShader })
+stage.frame()

@@ -9,7 +9,7 @@ type WorldProps = {
 	renderer: THREE.WebGLRenderer
 }
 
-export class World {
+export class Stage {
 	scene: THREE.Scene
 	camera: THREE.PerspectiveCamera
 	renderer: THREE.WebGLRenderer
