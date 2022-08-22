@@ -37,7 +37,7 @@ export class WebGL {
 		this.program = program
 	}
 
-	static getShader(gl2: WebGL2RenderingContext, shaderType: number, shaderSource: string) {
+	static getShader = (gl2: WebGL2RenderingContext, shaderType: number, shaderSource: string) => {
 		if (!gl2) return
 
 		const shader = gl2.createShader(shaderType)
