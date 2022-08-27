@@ -21,7 +21,7 @@ a {
 	text-decoration: inherit;
 }
 a:hover {
-	color: #9c9c9c;
+	color: #828181;
 }
 
 body {
@@ -32,4 +32,15 @@ body {
 	min-width: 320px;
 	min-height: 100vh;
 	background-color: white;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: disc;
+	margin-bottom: 0.7rem;
+	color: #333;
 }
