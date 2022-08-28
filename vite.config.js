@@ -10,6 +10,7 @@ export default defineConfig({
 		outDir,
 		rollupOptions: {
 			input: {
+				main: resolve(root, 'index.html'),
 				'webgl-sample1': resolve(root, 'webgl-sample1', 'index.html'),
 				'threejs-sample1': resolve(root, 'threejs-sample1', 'index.html'),
 			},
