@@ -1,6 +1,6 @@
 # webgl-threejs-vite-ts
 
-vite , typescript, webgl, three.js
+vite, typescript, webgl, three.js
 
 
 ## 
