@@ -8,7 +8,6 @@ export default defineConfig({
 	root,
 	build: {
 		outDir,
-		emptyOutDir: true,
 		rollupOptions: {
 			input: {
 				'webgl-sample1': resolve(root, 'webgl-sample1', 'index.html'),
