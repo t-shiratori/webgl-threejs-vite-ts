@@ -1,7 +1,7 @@
 import './style.css'
 import vertexSource from './shader/vertex.glsl?raw'
 import fragmentSource from './shader/fragment.glsl?raw'
-import { WebGL } from '../common/webgl'
+import { WebGL } from '../../common/webgl'
 
 const attribLoacations: { vPositionLocation: number } = { vPositionLocation: 0 }
 let vertexBuffer: WebGLBuffer | null = null
