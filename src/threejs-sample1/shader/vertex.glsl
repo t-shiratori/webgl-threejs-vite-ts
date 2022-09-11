@@ -1,11 +1,8 @@
 #version 300 es
 precision mediump float;
 
-in vec3 position; // BoxGeometry position
-
+in vec3 position;
 uniform float time;
-uniform vec2 mouse;
-uniform vec2 resolution;
 uniform float radius;
 uniform mat4 projectionMatrix;
 uniform mat4 modelViewMatrix;
