@@ -2,7 +2,7 @@ import './style.css'
 import * as THREE from 'three'
 import vertexSource from './shader/vertex.glsl?raw'
 import fragmentSource from './shader/fragment.glsl?raw'
-import { Stage } from './stage'
+import { Stage } from '../common/stage'
 
 /* scene
 --------------------------------------*/

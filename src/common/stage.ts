@@ -5,13 +5,13 @@ type TInRenderingTask = (time?: number) => void
 
 type WorldProps = {
 	scene: THREE.Scene
-	camera: THREE.PerspectiveCamera
+	camera: THREE.PerspectiveCamera | THREE.OrthographicCamera
 	renderer: THREE.WebGLRenderer
 }
 
 export class Stage {
 	scene: THREE.Scene
-	camera: THREE.PerspectiveCamera
+	camera: THREE.PerspectiveCamera | THREE.OrthographicCamera
 	renderer: THREE.WebGLRenderer
 	clock: THREE.Clock
 	tasksInFrame: Map<string, TInRenderingTask> = new Map()
@@ -52,7 +52,7 @@ export class Stage {
 		const height = window.innerHeight
 		renderer.setPixelRatio(window.devicePixelRatio)
 		renderer.setSize(width, height)
-		camera.aspect = width / height
+		if (camera.type === 'PerspectiveCamera') camera.aspect = width / height
 		camera.updateProjectionMatrix()
 	}
 }
