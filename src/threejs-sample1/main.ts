@@ -1,5 +1,6 @@
 import './style.css'
 import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import vertexSource from './shader/vertex.glsl?raw'
 import fragmentSource from './shader/fragment.glsl?raw'
 import { Stage } from '../common/stage'
@@ -51,6 +52,13 @@ scene.add(mesh)
 const updateShader = (time?: number) => {
 	mesh.material.uniforms.time.value = time
 }
+
+/* OrbitControls
+--------------------------------------*/
+const orbitControls = new OrbitControls(camera, renderer.domElement)
+orbitControls.autoRotate = false
+orbitControls.enableDamping = true
+orbitControls.dampingFactor = 0.12
 
 /* Stage
 --------------------------------------*/

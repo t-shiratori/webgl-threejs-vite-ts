@@ -1,4 +1,3 @@
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import * as THREE from 'three'
 
 type TInRenderingTask = (time?: number) => void
@@ -21,13 +20,7 @@ export class Stage {
 		this.camera = camera
 		this.renderer = renderer
 		this.clock = new THREE.Clock()
-
 		window.addEventListener('resize', this.onResize)
-
-		const orbitControls = new OrbitControls(camera, renderer.domElement)
-		orbitControls.autoRotate = false
-		orbitControls.enableDamping = true
-		orbitControls.dampingFactor = 0.12
 	}
 
 	addFrameTask = ({ taskName, task }: { taskName: string; task: TInRenderingTask }) => {
