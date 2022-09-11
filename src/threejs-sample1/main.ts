@@ -34,18 +34,6 @@ const shaderMaterial = new THREE.RawShaderMaterial({
 		time: {
 			value: 0,
 		},
-		mouse: {
-			value: {
-				x: 0.0,
-				y: 0.0,
-			},
-		},
-		resolution: {
-			value: {
-				x: 0.0,
-				y: 0.0,
-			},
-		},
 		radius: {
 			value: 30.0,
 		},
