@@ -8,6 +8,7 @@ const outDir = resolve(__dirname, 'dist')
 
 // 各ページのディレクトリ名のリストを取得
 const pageDirNameList = fs.readdirSync(pages)
+console.log('pageDirNameList:', pageDirNameList)
 
 // rollupOptions用のコンフィグを作成
 const pageConfig = pageDirNameList.reduce((arr, pageName) => {
