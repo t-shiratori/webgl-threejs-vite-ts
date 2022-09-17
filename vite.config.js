@@ -22,7 +22,7 @@ const paheListHtml = pageDirNameList
 	.join('')
 
 // rollupのプラグインを定義
-// index.htmlを書き換える。各ページのリンクリストを差し込む。
+// index.htmlを書き換えて各ページへ遷移するリンク用HTMLを差し込む
 const htmlPlugin = () => {
 	return {
 		name: 'html-transform',
