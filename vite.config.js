@@ -18,7 +18,7 @@ const pageConfig = pageDirNameList.reduce((arr, pageName) => {
 
 // 各ページ遷移用リストのHTMLを作成
 const paheListHtml = pageDirNameList
-	.map((pageName) => `<li><a href="./pages/${pageName}/index.html">${pageName}</a></li>`)
+	.map((pageName) => `<li><a target="_blank" href="./pages/${pageName}/index.html">${pageName}</a></li>`)
 	.join('')
 
 // rollupのプラグインを定義
