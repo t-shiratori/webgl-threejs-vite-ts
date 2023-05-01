@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "prettier:fix": "prettier --write ./src/**/*.{ts,css}"
+    "prettier:fix": "prettier --write ./src/**/*.{ts,css,html}"
   },
   "devDependencies": {
     "@types/three": "^0.143.1",
