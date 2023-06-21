@@ -31,17 +31,17 @@ const boxGeometry = new THREE.BoxGeometry(40, 40, 40, 10, 10, 10)
 /* Material
 --------------------------------------*/
 const shaderMaterial = new THREE.RawShaderMaterial({
-	uniforms: {
-		time: {
-			value: 0,
-		},
-		radius: {
-			value: 30.0,
-		},
-	},
-	vertexShader: vertexSource,
-	fragmentShader: fragmentSource,
-	wireframe: true,
+  uniforms: {
+    time: {
+      value: 0,
+    },
+    radius: {
+      value: 30.0,
+    },
+  },
+  vertexShader: vertexSource,
+  fragmentShader: fragmentSource,
+  wireframe: true,
 })
 
 /* Mesh
@@ -50,7 +50,7 @@ const mesh = new THREE.Mesh(boxGeometry, shaderMaterial)
 scene.add(mesh)
 
 const updateShader = (time?: number) => {
-	mesh.material.uniforms.time.value = time
+  mesh.material.uniforms.time.value = time
 }
 
 /* OrbitControls

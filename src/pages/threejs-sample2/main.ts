@@ -11,12 +11,12 @@ const scene = new THREE.Scene()
 /* camera
 --------------------------------------*/
 const camera = new THREE.OrthographicCamera(
-	-window.innerWidth / 2,
-	window.innerWidth / 2,
-	window.innerHeight / 2,
-	-window.innerHeight / 2,
-	0,
-	0.1,
+  -window.innerWidth / 2,
+  window.innerWidth / 2,
+  window.innerHeight / 2,
+  -window.innerHeight / 2,
+  0,
+  0.1,
 )
 
 /* renderer
@@ -32,22 +32,22 @@ const planeBufferGeometry = new THREE.PlaneBufferGeometry(window.innerWidth, win
 /* Material
 --------------------------------------*/
 const shaderMaterial = new THREE.RawShaderMaterial({
-	uniforms: {
-		time: {
-			value: 0,
-		},
-		mouse: {
-			value: {
-				x: 0.0,
-				y: 0.0,
-			},
-		},
-		resolution: {
-			value: new THREE.Vector2(window.innerWidth, window.innerHeight),
-		},
-	},
-	vertexShader: vertexSource,
-	fragmentShader: fragmentSource,
+  uniforms: {
+    time: {
+      value: 0,
+    },
+    mouse: {
+      value: {
+        x: 0.0,
+        y: 0.0,
+      },
+    },
+    resolution: {
+      value: new THREE.Vector2(window.innerWidth, window.innerHeight),
+    },
+  },
+  vertexShader: vertexSource,
+  fragmentShader: fragmentSource,
 })
 
 /* Mesh
